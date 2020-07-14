@@ -7,7 +7,7 @@
 public class DoubleCheck {
 private static volatile DoubleCheck dc;
 private DoubleCheck(){}
-private static DoubleCheck getInstance(){
+public static DoubleCheck getInstance(){
 if(dc==null){
     dc=new DoubleCheck();
     synchronized (DoubleCheck.class){
